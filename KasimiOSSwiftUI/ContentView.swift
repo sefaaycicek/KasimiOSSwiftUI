@@ -9,11 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        CustomView()
+    }
+}
+//VStack, HStack, ZStack
+struct CustomView: View {
+    var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            Spacer()
+                .frame(width: 10)
+                .background(Color.red)
             Text("Hello, world!")
+            
+            HStack {
+                Spacer()
+                    .frame(height: 10)
+                    .background(Color.red)
+                Text("Hello, world!")
+                Spacer()
+                    .frame(height: 10)
+                    .background(Color.red)
+                Text("Hello, world!")
+                Spacer()
+                    .frame(height: 10)
+                    .background(Color.red)
+                Text("Hello, world!")
+                Spacer()
+                    .frame(height: 10)
+                    .background(Color.red)
+            }
+            
+            Spacer()
+                .frame(width: 10)
+                .background(Color.red)
+            
+            
         }
         .padding()
     }

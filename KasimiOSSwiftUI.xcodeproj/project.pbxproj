@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DCCC64EC2CDE27AF00456321 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DCCC64EB2CDE27AF00456321 /* Realm */; };
+		DCCC64EE2CDE27AF00456321 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCCC64ED2CDE27AF00456321 /* RealmSwift */; };
+		DCCC64F12CDE27C000456321 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DCCC64F02CDE27C000456321 /* RxAlamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DCCC643C2CDDEC6B00456321 /* KasimiOSSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KasimiOSSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCCC64F12CDE27C000456321 /* RxAlamofire in Frameworks */,
+				DCCC64EE2CDE27AF00456321 /* RealmSwift in Frameworks */,
+				DCCC64EC2CDE27AF00456321 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = KasimiOSSwiftUI;
 			packageProductDependencies = (
+				DCCC64EB2CDE27AF00456321 /* Realm */,
+				DCCC64ED2CDE27AF00456321 /* RealmSwift */,
+				DCCC64F02CDE27C000456321 /* RxAlamofire */,
 			);
 			productName = KasimiOSSwiftUI;
 			productReference = DCCC643C2CDDEC6B00456321 /* KasimiOSSwiftUI.app */;
@@ -94,6 +106,10 @@
 			);
 			mainGroup = DCCC64332CDDEC6B00456321;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DCCC64EA2CDE27AF00456321 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				DCCC64EF2CDE27C000456321 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DCCC643D2CDDEC6B00456321 /* Products */;
 			projectDirPath = "";
@@ -255,6 +271,7 @@
 				DEVELOPMENT_TEAM = Y7653CXCKR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +301,7 @@
 				DEVELOPMENT_TEAM = Y7653CXCKR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +342,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCCC64EA2CDE27AF00456321 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.30.0;
+			};
+		};
+		DCCC64EF2CDE27C000456321 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCCC64EB2CDE27AF00456321 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCCC64EA2CDE27AF00456321 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		DCCC64ED2CDE27AF00456321 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCCC64EA2CDE27AF00456321 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		DCCC64F02CDE27C000456321 /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCCC64EF2CDE27C000456321 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCCC64342CDDEC6B00456321 /* Project object */;
 }
